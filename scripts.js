@@ -42,11 +42,11 @@ function updateWeather(city) {
     city.data.temperature.feels_like
   )}`;
 
-  let windSpeed = document.querySelector(".wind-speed .condition .values");
-  windSpeed.innerHTML = `${city.data.wind.speed}km/h`;
+//   let windSpeed = document.querySelector(".wind-speed .condition .values");
+//   windSpeed.innerHTML = `${city.data.wind.speed}km/h`;
 
-  let humidity = document.querySelector(".humidity .condition .values");
-  humidity.innerHTML = `${city.data.temperature.humidity}%`;
+//   let humidity = document.querySelector(".humidity .condition .values");
+//   humidity.innerHTML = `${city.data.temperature.humidity}%`;
 
   let weather_description = document.querySelector(".description");
   weather_description.innerHTML = `${city.data.condition.description}`;
@@ -57,19 +57,19 @@ function updateWeather(city) {
   formatDate();
 }
 
-function update_min_max_temp(city) {
-  let minimum_temp = document.querySelector(
-    ".min-temperature .condition .values"
-  );
-  let maximum_temp = document.querySelector(
-    ".max-temperature .condition .values"
-  );
+// function update_min_max_temp(city) {
+//   let minimum_temp = document.querySelector(
+//     ".min-temperature .condition .values"
+//   );
+//   let maximum_temp = document.querySelector(
+//     ".max-temperature .condition .values"
+//   );
 
-  // console.log(minimum_temp);
-  // console.log(maximum_temp);
-  // minimum_temp.innerHTML = `${city.data.daily.temperature.minimum}`;
-  // maximum_temp.innerHTML = `${city.data.daily.temperature.maximum}`;
-}
+//   // console.log(minimum_temp);
+//   // console.log(maximum_temp);
+//   // minimum_temp.innerHTML = `${city.data.daily.temperature.minimum}`;
+//   // maximum_temp.innerHTML = `${city.data.daily.temperature.maximum}`;
+// }
 
 function searchCity(response) {
   response.preventDefault();

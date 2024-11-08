@@ -5,7 +5,7 @@ body {
 }
 .weather-container {
   max-width: 600px;
-  height: 530px;
+
   background-color: rgb(11 19 30);
   border: 1px none rgb(11, 19, 30);
   padding: 20px 40px 0px;
@@ -129,9 +129,26 @@ body {
   height: 110px;
 }
 
-/* .material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-} */
+/* ................weather-forecast............... */
+
+.weather-forecast-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-forecast-cards {
+  padding: 8px;
+  /* padding-bottom: 0px; */
+  text-align: center;
+  background-color: #36454f4e;
+  border: 1px solid #36454f4e;
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
+}
+.weather-forecast-cards:hover {
+  border-bottom: 2px solid #840ec9;
+
+}
 
 .flex2 {
   padding-right: 20px;
@@ -154,14 +171,12 @@ body {
 .weather-conditions-container {
   padding: 10px;
   padding-bottom: 20px;
-  /* background-color: #71797e; */
   background-color: #202c3c3d;
   border: 2px solid #202c3c3d;
   border-radius: 5px;
   margin-bottom: 10px;
 }
 .weather-conditions-container p {
-  /* color: #36454f; */
   font-size: 15px;
   font-weight: 300;
   line-height: 20px;
@@ -169,8 +184,6 @@ body {
   padding-top: 5px;
   padding-left: 5px;
   margin: 0px;
-
-  /* background-color: #202c3c3d; */
 }
 .weather-conditions-container .air-conditions {
   font-size: 13px;
@@ -184,7 +197,6 @@ body {
 }
 
 footer {
-  /* opacity: 70%; */
   font-size: 16px;
   font-weight: 400;
   padding: 10px;
