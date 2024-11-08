@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300&display=swap" />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+    <div class="weather-container">
+        <form class="input-search-form" id="input-search-form">
+            <input type="text" class="input-search-text" placeholder="Search for cities..." required>
+            <input type="submit" class="input-search-submit" value="Search">
+        </form>
+        <div class="current-city-weather">
+            <div class="current-city-name-time">
+                <div class="current-city">
+                    <h1 class="city-name" id="city-name">
+                        <!-- England -->
+                    </h1>
+                    <h3 class="current-city-time" id="current-city-time">
+                        <!-- Wednesday, 23 October -->
+                    </h3>
+                </div>
+                <div class="current-city-weather-details">
+                    <div class="current-city-temperature ">
+                        <h1 class="current-city-temperature">
+                            <span class="temperature-value temp-update">17</span><span class="temp-unit unit">ºC</span>
+                        </h1>
+                    </div>
+                    <hr id="horizontal-line">
+                    <div class="current-city-temperature-feels-like">
+                        <h2 class="description">
+                            <!-- Partly Cloudy -->
+                        </h2>
+                        <h3>
+                            Feels like
+                            <span class="temperature-feels-like temp-update">
+                                <!-- 15 -->
+                            </span><span class="temp-unit">ºC</span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="current-city-weather-icon">
+                <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+                    alt="few-clouds-day">
+
+            </div>
+        </div>
+        <div class="weather-conditions-container">
+            <p class="air-conditions">AIR CONDITIONS</p>
+            <div class="weather-conditions">
+
+                <div class="flex1">
+                    <div class="temp-flex">
+                        <div class="icon">
+
+                            <span class="material-symbols-outlined">
+                                thermometer_loss
+                            </span>
+
+                        </div>
+                        <div class="cards min-temperature">
+                            <p class="condition">Min-Temperature:
+                                <br><span class="values temp-update">
+                                    16.65
+                                </span><span class="temp-unit">ºC </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="temp-flex">
+                        <div class="icon">
+                            <span class="material-symbols-outlined">
+                                thermometer_gain
+                            </span>
+                        </div>
+                        <div class="cards max-temperature">
+                            <p class="condition">Max-Temperature:
+                                <br> <span class="values temp-update">21.08</span><span class="temp-unit">ºC</span>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex2">
+                    <div class="temp-flex">
+                        <div class="icon">
+                            <span class="material-symbols-outlined">
+                                air
+                            </span>
+
+                        </div>
+                        <div class="cards wind-speed">
+                            <p class="condition">Wind Speed:
+                                <br><span class="values">
+                                    <!-- 6.27km/h -->
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="temp-flex">
+                        <div class="icon">
+                            <span class="material-symbols-outlined">
+                                humidity_low
+                            </span>
+                        </div>
+                        <div class="cards humidity">
+                            <p class="condition">Humidity: <br><span class="values">
+                                    <!-- 58% -->
+                                </span></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer class="site-information">
+            This site was coded by
+            <a href="https://github.com/jasleen-kaur-2649" target="_blank" rel="noopener">Jasleen Kaur</a> and is on
+            <a href="https://github.com/jasleen-kaur-2649/weather-website-from-scratch" target="_blank"
+                rel="noopener">Github</a> and hosted on
+            <a href="https://new-weather-site-by-silly-moons.netlify.app/" target="_blank" rel="noopener">Netlify</a>.
+        </footer>
+
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
