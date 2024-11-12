@@ -129,25 +129,63 @@ body {
   height: 110px;
 }
 
-/* ................weather-forecast............... */
+/* ................weather-forecast................ */
 
 .weather-forecast-container {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 20px;
 }
 
 .weather-forecast-cards {
   padding: 8px;
   /* padding-bottom: 0px; */
+  height: 130px;
   text-align: center;
   background-color: #36454f4e;
   border: 1px solid #36454f4e;
   border-radius: 10px;
+  transform: scale(0.9);
   transition: all 200ms ease-in-out;
 }
 .weather-forecast-cards:hover {
   border-bottom: 2px solid #840ec9;
+  transform: scale(1.001);
+}
+.forecast-time {
+  /* color: #e5e4e272; */
+  opacity: 30%;
+  font-weight: 200;
+  font-size: 15px;
+}
+.forecast-temperatures {
+  display: block;
+  position: relative;
+  bottom: 20px;
+  font-size: 15px;
+  font-weight: 100;
+  justify-items: center;
+  padding-left: 10px;
+}
+.forecast-icon img {
+  height: 90px;
+  width: 90px;
+}
 
+/* .min-temperature {
+  margin: 8.5px;
+}
+.max-temperature {
+  margin: 8.5px;
+} */
+.temp-container {
+  margin: 8px;
+}
+
+.back-slash {
+  color: #840ec9;
+  font-weight: 400;
+  font-style: oblique;
 }
 
 .flex2 {
