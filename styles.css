@@ -5,15 +5,12 @@ body {
 }
 .weather-container {
   max-width: 600px;
-
   background-color: rgb(11 19 30);
   border: 1px none rgb(11, 19, 30);
   padding: 20px 40px 0px;
   margin: 50px auto;
-  /* margin: 40px auto; */
   border-radius: 10px;
-  /* transform: scale(0.9);
-  position: sticky; */
+  /* transform: scale(0.9); */
 }
 
 #input-search-form {
@@ -56,9 +53,9 @@ body {
   /* margin-top: 20px; */
 }
 .current-city-weather-icon img {
-  /* font-size: 80px; */
   position: relative;
-  top: 25px;
+  top: 45px;
+  right: 20px;
   transform: scale(1.8);
 }
 

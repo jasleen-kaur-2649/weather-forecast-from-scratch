@@ -33,6 +33,9 @@ function formatDate() {
   cityTime.innerHTML = `${days[day]}, ${date} ${months[month]}`;
 }
 function updateWeather(city) {
+  let cityName = document.querySelector("#city-name");
+  cityName.innerHTML = `${city.data.city}`;
+
   let actualTemperature = document.querySelector(".temperature-value");
   actualTemperature.innerHTML = `${Math.round(city.data.temperature.current)}`;
 
@@ -63,43 +66,32 @@ function updateCards(city) {
   );
 
   let today = new Date();
-  let day = today.getDay();
-  let days = [
+
+  const days = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday",
-  ];
-  let date = today.getDate();
-  if (date < 10) {
-    date = `0${date}`;
-  }
-  let month = today.getMonth();
-  let months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "November",
-    "October",
-    "December",
   ];
 
   const totalCards = 5;
   weatherForecastContainer.innerHTML = "";
-  for (i = 0; i < totalCards; i++) {
-    ++date;
+  for (i = 1; i <= totalCards; i++) {
+    let forecastDate = new Date(today);
+    forecastDate.setDate(today.getDate() + i);
+    let dayName = days[forecastDate.getDay()];
+    let date = forecastDate.getDate();
+    if (date < 10) {
+      date = `0${date}`;
+    } else {
+      date = `${date}`;
+    }
     weatherForecastContainer.innerHTML += `<div class="weather-forecast-cards">
                 <div class="forecast-time">
-                ${days[day]},${date}
+                ${dayName},${date}
                 </div>
                 <div class="forecast-icon">
                 <img src="${city.data.daily[i].condition.icon_url}"
@@ -115,7 +107,6 @@ function updateCards(city) {
                 )}</span><span>º</span></span></strong>
                 </p></div>
                 </div>`;
-    ++day;
   }
 }
 
@@ -124,10 +115,10 @@ function searchCity(response) {
   let apiKey = "2d8o4b96bdta6ee065c85fc43853285d";
   let cityElement = document.querySelector(".input-search-text");
   cityElement = cityElement.value;
-  let cityName = document.querySelector("#city-name");
-  cityName.innerHTML = cityElement;
+  // let cityName = document.querySelector("#city-name");
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityElement}&key=${apiKey}`;
   let foreCastApiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${cityElement}&key=${apiKey}`;
+  // cityName.innerHTML = cityElement;
   // console.log(foreCastApiUrl);
   axios.get(apiUrl).then(updateWeather);
   axios.get(foreCastApiUrl).then(updateCards);
