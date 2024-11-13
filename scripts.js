@@ -45,11 +45,11 @@ function updateWeather(city) {
     city.data.temperature.feels_like
   )}`;
 
-  //   let windSpeed = document.querySelector(".wind-speed .condition .values");
-  //   windSpeed.innerHTML = `${city.data.wind.speed}km/h`;
+  let windSpeed = document.querySelector(".wind-speed");
+  windSpeed.innerHTML = `${Math.round(city.data.wind.speed)}km/h`;
 
-  //   let humidity = document.querySelector(".humidity .condition .values");
-  //   humidity.innerHTML = `${city.data.temperature.humidity}%`;
+  let humidity = document.querySelector(".humidity");
+  humidity.innerHTML = `${Math.round(city.data.temperature.humidity)}%`;
 
   let weather_description = document.querySelector(".description");
   weather_description.innerHTML = `${city.data.condition.description}`;

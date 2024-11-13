@@ -44,6 +44,19 @@ body {
   cursor: pointer;
 }
 
+.weather-details .hr-line {
+  font-weight: 300;
+  padding-left: 7px;
+  padding-right: 7px;
+
+  /* max-width: 10px; */
+}
+.weather-details {
+  font-weight: 100;
+  opacity: 30%;
+  font-size: 15px;
+  margin-top: 5px;
+}
 .current-city-weather {
   display: flex;
   justify-content: space-between;
@@ -61,6 +74,8 @@ body {
 
 .current-city-weather-details {
   display: flex;
+  position: relative;
+  bottom: 38px;
   /* column-gap: 50px; */
 }
 #city-name {
