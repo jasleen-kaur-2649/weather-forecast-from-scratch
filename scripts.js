@@ -52,7 +52,11 @@ function updateWeather(city) {
   humidity.innerHTML = `${Math.round(city.data.temperature.humidity)}%`;
 
   let weather_description = document.querySelector(".description");
-  weather_description.innerHTML = `${city.data.condition.description}`;
+  let updated_description = city.data.condition.description;
+
+  weather_description.innerHTML = `${updated_description
+    .charAt(0)
+    .toUpperCase()}${updated_description.slice(1)}`;
   let weather_icon = document.querySelector(".current-city-weather-icon");
   weather_icon.innerHTML = `<img src="${city.data.condition.icon_url}"
                         alt="${city.data.condition.icon}">`;

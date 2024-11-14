@@ -45,17 +45,18 @@ body {
 }
 
 .weather-details .hr-line {
-  font-weight: 300;
+  color: #840ec9;
+  font-weight: 500;
   padding-left: 7px;
   padding-right: 7px;
-
-  /* max-width: 10px; */
 }
 .weather-details {
   font-weight: 100;
   opacity: 30%;
   font-size: 15px;
   margin-top: 5px;
+  position: relative;
+  top: 3px;
 }
 .current-city-weather {
   display: flex;
@@ -75,7 +76,7 @@ body {
 .current-city-weather-details {
   display: flex;
   position: relative;
-  bottom: 38px;
+  bottom: 36px;
   /* column-gap: 50px; */
 }
 #city-name {
@@ -146,7 +147,8 @@ body {
 .weather-forecast-container {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
 }
 
 .weather-forecast-cards {
